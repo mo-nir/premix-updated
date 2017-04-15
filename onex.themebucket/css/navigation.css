@@ -1,0 +1,267 @@
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu li {
+	position: relative;
+}
+.sf-menu ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0;
+	z-index: 99;
+    background: #fff;
+    padding: 12px 0px;
+}
+
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+	display: block;
+}
+
+.sf-menu a {
+	display: block;
+	position: relative;
+}
+.sf-menu ul ul {
+	top: 0;
+	left: 100%;
+}
+
+
+/*** DEMO SKIN ***/
+
+.sf-menu ul {
+    box-shadow: none;
+    min-width: 18em;
+    border: 1px solid #ccc;
+    padding: 12px 0px;
+}
+
+.sf-menu ul  a {
+    padding: 10px 24px;
+}
+
+.sf-menu >li > a {
+
+    padding: 0 1em;
+    text-decoration: none;
+    zoom: 1; /* IE7 */
+}
+.sf-menu ul  a {
+    border-top: 1px solid #dFeEFF; /* fallback colour must use full shorthand */
+    border-top: 1px solid rgba(255,255,255,.5);
+    padding: 10px 24px;
+    text-decoration: none;
+    zoom: 1; /* IE7 */
+    text-align: left;
+}
+
+.sf-menu li {
+	white-space: nowrap; /* no need for Supersubs plugin */
+	*white-space: normal; /* ...unless you support IE7 (let it wrap) */
+	-webkit-transition: background .2s;
+	transition: background .2s;
+}
+.sf-menu ul li {
+	background: #fff;
+    -webkit-transition: background-color .5s ease-out;
+    -moz-transition: background-color .5s ease-out;
+    -o-transition: background-color .5s ease-out;
+    transition: background-color .5s ease-out;
+}
+.sf-menu ul ul li {
+	background: #fff;
+    -webkit-transition: background-color .5s ease-out;
+    -moz-transition: background-color .5s ease-out;
+    -o-transition: background-color .5s ease-out;
+    transition: background-color .5s ease-out;
+}
+.sf-menu li:hover,
+.sf-menu li.sfHover {
+	/*background: #f2f2f2;*/
+    -webkit-transition: background-color .5s ease-out;
+    -moz-transition: background-color .5s ease-out;
+    -o-transition: background-color .5s ease-out;
+    transition: background-color .5s ease-out;
+}
+.top-nav.navigation > ul > li.sfHover > a {
+    /*color: #31bfc3;*/
+}
+
+
+/*.sf-arrows .sf-with-ul {*/
+	/*padding-right: 2.5em;*/
+	/**padding-right: 1em;  */
+/*}*/
+
+/*.sf-arrows .sf-with-ul:after {*/
+	/*content: '';*/
+	/*position: absolute;*/
+	/*top: 50%;*/
+	/*right: 1em;*/
+	/*margin-top: -3px;*/
+	/*height: 0;*/
+	/*width: 0;*/
+	/**/
+	/*border: 5px solid transparent;*/
+	/*border-top-color: #dFeEFF; */
+	/*border-top-color: rgba(000,000,000,.5);*/
+/*}*/
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: #00bab9; /* IE8 fallback colour */
+}
+/* styling for right-facing arrows */
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-left-color: rgba(255,255,255,.5);
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: white;
+}
+
+
+
+
+/*=============================
+NAVBAR
+===============================*/
+
+/*** adding the class sf-navbar in addition to sf-menu creates an all-horizontal nav-bar menu ***/
+.sf-navbar {
+    background: #BDD2FF;
+    position: relative;
+    margin-bottom: 5em;
+}
+/* provide background colour for submenu strip */
+/* you should just set the menu's container bg colour rather than use pseudo-elements */
+.sf-navbar:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background-color: #BDD2FF;
+    height: 200%;
+    width: 100%;
+}
+.sf-navbar ul {
+    box-shadow: none;
+}
+.sf-navbar li {
+    background: #AABDE6;
+    position: static;
+}
+.sf-navbar > li > a,
+.sf-navbar > li > ul > li > a {
+    border: none;
+}
+.sf-navbar > li > ul {
+    min-width: 36em; /* set this to whatever suits your design */
+}
+.sf-navbar ul li {
+    background: #BDD2FF;
+    position: relative;
+}
+.sf-navbar ul ul {
+    left: 0;
+    top: 100%;
+}
+.sf-navbar ul ul li {
+    width: 100%;
+}
+.sf-navbar > li > ul > li {
+    float: left;
+}
+.sf-navbar li.current {
+    background: #BDD2FF;
+}
+.sf-navbar li:hover,
+.sf-navbar li.sfHover,
+.sf-navbar ul li.current {
+    background: #BDD2FF;
+}
+.sf-navbar ul li:hover,
+.sf-navbar ul li.sfHover,
+.sf-navbar ul ul li {
+    background: #D1DFFF;
+}
+.sf-navbar ul ul li:hover,
+.sf-navbar ul ul li.sfHover,
+.sf-navbar ul ul li.current {
+    background: #E6EEFF;
+}
+.sf-navbar ul li.current > a {
+    font-weight: bold;
+}
+
+/*** point all arrows down ***/
+.sf-arrows.sf-navbar ul .sf-with-ul:after {
+    margin-top: -3px;
+    margin-right: 0;
+    border-color: transparent;
+    border-top-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+    border-top-color: rgba(255,255,255,.5);
+}
+
+.sf-arrows.sf-navbar ul > li > .sf-with-ul:focus:after,
+.sf-arrows.sf-navbar ul > li:hover > .sf-with-ul:after,
+.sf-arrows.sf-navbar ul > .sfHover > .sf-with-ul:after {
+    border-color: transparent;
+    border-top-color: white;
+}
+
+
+
+/*=============================
+VERTICAL
+===============================*/
+
+/* adding sf-vertical class in addition to sf-menu creates a vertical menu */
+/* eg. <ul class="sf-menu sf-vertical"> ... */
+.sf-vertical {
+    width: 12em;
+    /* If you want the width of the closed menu to expand to its
+    widest top-level menu item (like its "Supersubs" submenus do),
+    replace the width rule above with the following two rules. */
+
+    /*
+    min-width: 12em;
+    *width: 12em;
+    */
+}
+.sf-vertical ul {
+    left:	100%;
+    top: 0;
+}
+.sf-vertical > li {
+    float: none;
+}
+.sf-vertical li {
+    width: 100%;
+}
+
+/*** alter arrow directions ***/
+.sf-vertical.sf-arrows > li > .sf-with-ul:after {
+    margin-top: -5px;
+    margin-right: -3px;
+    border-color: transparent;
+    border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+    border-left-color: rgba(255,255,255,.5);
+}
+.sf-vertical.sf-arrows li > .sf-with-ul:focus:after,
+.sf-vertical.sf-arrows li:hover > .sf-with-ul:after,
+.sf-vertical.sf-arrows .sfHover > .sf-with-ul:after {
+    border-left-color: white;
+}
+
+
