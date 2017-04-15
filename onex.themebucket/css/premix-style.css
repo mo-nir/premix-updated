@@ -1372,7 +1372,7 @@ header.premix-main-menu-area.fixedMenu {
 	border-radius: 5px;
 	width: auto;
 	margin: 0 auto;
-	display: block;
+/*	display: block;*/
 	transition: all .4s ease-out;
 }
 .premix-contact-us-area input[type="submit"]:hover,
